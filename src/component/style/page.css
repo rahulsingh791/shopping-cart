@@ -53,6 +53,10 @@
     background-color: rgb(201, 201, 201);
 }
 
+.itemList .searBox .searchButton:hover {
+    box-shadow: 0px 0px 2px grey;
+}
+
 .item {
     padding: 1%;
     flex-grow: 1;
