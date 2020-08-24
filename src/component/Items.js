@@ -3,9 +3,9 @@ import Page from './Page';
 
 
 
-class Items extends Component {
+class Items extends Component{
 
-    addToCart(num){
+    addToCart = (num) => {
 
         if(localStorage.getItem("ItemArr")==null){
             let ia = [num];
@@ -20,20 +20,29 @@ class Items extends Component {
 
        
     }
-    
-    render(){
 
-        let sid = this.props.id;
+    focusFirstChild = () => {
+        alert('hey');
+        this.firstRef.current.focus();
+    }
+    
+    
+
+    render(){
         return(
-            <div className="item">
+            <div ref={this.props.innerRef} className="item">
                 <img alt="ItemImg" src={this.props.src}/>
                 <p>{this.props.name}</p>
                 <h5>{this.props.price}</h5>
                
-                <button onClick={() => this.addToCart(sid)}>Add To Cart</button>
+                <button onClick={() => this.addToCart(this.props.id)}>Add To Cart</button>
             </div>
         );
     }
+    
 }
 
-export default Items;
+
+export default React.forwardRef((props, ref) => <Items 
+  innerRef={ref} {...props}
+/>);

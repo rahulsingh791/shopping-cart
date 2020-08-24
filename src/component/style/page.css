@@ -21,12 +21,36 @@
     flex-wrap: wrap;
 }
 
-.itemList h3 {
+.itemList .searBox {
     width: 100%;
     text-align: left;
     margin:0;
+    margin-top: 1%;
+
+}
+
+.itemList .searBox b {
+    margin:0;
     margin-left:1.5%;    
     margin-top:1%;
+}
+
+.itemList .searBox .inSearchBox {
+    margin-left:3rem;
+    border:none;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.itemList .searBox .searchButton {
+    margin-left: 1rem;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.itemList .searBox .searchButton:active {
+    background-color: rgb(201, 201, 201);
 }
 
 .item {
